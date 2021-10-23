@@ -1,8 +1,8 @@
-FROM node:carbon
+FROM node:14
 
-run apt-get update
-run apt-get upgrade -y
-run apt-get -y install autoconf automake libtool nasm make pkg-config git apt-utils
+#run apt-get update
+#run apt-get upgrade -y
+#run apt-get -y install autoconf automake libtool nasm make pkg-config git apt-utils
 
 # Create app directory
 RUN mkdir -p /usr/src/app
