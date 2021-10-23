@@ -6,7 +6,7 @@ pipeline{
         {
             steps
             {
-                catchError
+                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE')
                 {
                     sh 'docker stop storybook'
                     sh 'docker rm storybook'
