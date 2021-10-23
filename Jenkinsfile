@@ -1,15 +1,14 @@
 pipeline{
     agent any
     stages {
-        stage('Install dependencies..'){
+        stage('Deploy Storybook'){
             steps{
-                sh 'npm install'
+                sh 'docker build -t react-app --no-cache .'
+                sh 'docker tag react-app localhost:5000/react-app'
+                sh 'docker push localhost:5000/react-app'
+                sh 'docker rmi -f react-app localhost:5000/react-app'
             }
         }
-        stage('Install'){
-            steps{
-                sh 'yarn build '
-            }
-        }
+        
     }
 }
