@@ -38,5 +38,5 @@ export default {
   Standard.args = {
       label: "Standard",
       variant:"standard",
-      isFullSize: true
+      isFullSize: true 
   }
