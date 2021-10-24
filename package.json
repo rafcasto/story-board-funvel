@@ -16,10 +16,12 @@
     "@rollup/plugin-commonjs": "^21.0.0",
     "@rollup/plugin-node-resolve": "^13.0.5",
     "@storybook/addon-actions": "^6.3.9",
+    "@storybook/addon-docs": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.9",
     "@storybook/addon-links": "^6.3.9",
     "@storybook/react": "^6.3.9",
     "@types/react": "^17.0.26",
+    "@types/styled-components": "^5.1.15",
     "babel-loader": "^8.2.2",
     "postcss": "^8.3.8",
     "react": "^17.0.2",
@@ -30,7 +32,10 @@
     "rollup-plugin-typescript2": "^0.30.0",
     "typescript": "^4.4.3"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "styled-components": "^5.3.3"
+  },
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
