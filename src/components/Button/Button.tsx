@@ -1,6 +1,6 @@
 import React from 'react';
 import './button.css';
-
+import  {Button}  from "@material-ui/core"
 export interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
@@ -13,6 +13,8 @@ export interface ButtonProps {
   /**
    * How large should the button be?
    */
+  variant?: 'text' | 'contained' | 'outlined';
+
   size?: 'small' | 'medium' | 'large';
   /**
    * Button contents
@@ -27,22 +29,25 @@ export interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
- export const Button = ({
+ export const IButton = ({
   primary = false,
-  size = 'medium',
+  variant = 'contained',
   backgroundColor,
+  size = 'medium',
   label,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  const mode = primary ? 'primary' : 'secondary';
   return (
-    <button
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
+    <Button
+      color={mode}
+      variant={variant}
+      size = {size}
+    
       style={{ backgroundColor }}
       {...props}
     >
       {label}
-    </button>
+    </Button>
   );
 };

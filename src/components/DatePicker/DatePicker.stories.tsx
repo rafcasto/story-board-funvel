@@ -1,21 +1,21 @@
 
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import {TextBox} from "./TextBox";
+import {DatePicker} from "./DatePicker";
 
 
 
 
 export default {
-    title: 'Example/TextBox',
-    component: TextBox,
+    title: 'Example/DatePicker',
+    component: DatePicker,
     // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-  } as ComponentMeta<typeof TextBox>;
+  } as ComponentMeta<typeof DatePicker>;
 
-  const Template: ComponentStory<typeof TextBox> = (args) => <TextBox {...args} />
+  const Template: ComponentStory<typeof DatePicker> = (args) => <DatePicker {...args} />
 
   export const Outlined = Template.bind({});
 
